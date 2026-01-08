@@ -61,8 +61,12 @@ Project Structure
 - Src Folder
     - assets Folder
         - styles Folder
+            - EmdLogin Folder
+                - emdlogin.css
             - Dashboard Folder
                 - dashboard.css
+            - EmdFilters Folder
+                - emdfilters.css
             - Print Folder
                 - print.css
     - Components

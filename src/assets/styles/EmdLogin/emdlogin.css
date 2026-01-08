@@ -1,0 +1,68 @@
+/* .emd-login-bg-color {
+    background-color: #007bff;
+} */
+
+.emd-login-card {
+    width: 420px;
+    border-radius: 12px;
+}
+
+.hand-pointer {
+    cursor: pointer;
+}
+
+.hand-pointer:hover {
+    transform: scale(1.1);
+}
+@media (min-width: 1200px) {
+    .emd-login-card {
+        width: 480px;
+        padding: 48px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .emd-login-card {
+        width: 440px;
+        padding: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .emd-login-card {
+        width: 380px;
+        padding: 32px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .emd-login-card {
+        width: 340px;
+        padding: 28px;
+    }
+}
+
+@media (max-width: 575px) {
+    .emd-login-card {
+        width: 100%;
+        padding: 24px;
+        margin: 0 12px;
+    }
+
+    .emd-login-wrapper {
+        padding: 40px 0;
+    }
+
+    .input-group-text svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .form-label {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+    }
+}

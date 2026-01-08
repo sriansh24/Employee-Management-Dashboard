@@ -84,50 +84,54 @@ const EmdDashboard = () => {
         inactive={inactiveEmployees}
       />
 
-      <div className="card border-0 shadow-sm">
-        <div className="row row-cols-1 row-cols-2 g-3">
-          <div className="col">
-            <EmployeeFilter
-              searchTerm={searchTerm}
-              onSearchChange={setSearchTerm}
-              genderFilter={genderFilter}
-              onGenderChange={setGenderFilter}
-              statusFilter={statusFilter}
-              onStatusChange={setStatusFilter}
-              onClear={() => {
-                setSearchTerm("");
-                setGenderFilter("");
-                setStatusFilter("");
-              }}
-            />
-          </div>
-          <div className="col">
-            <button
-              className="btn btn-primary mb-3"
-              onClick={() => setShowForm(true)}
-            >
-              + Add Employee
-            </button>
+      <div className="card border-0 shadow-sm mt-4">
+        <div className="card-header bg-white border-0 pb-0">
+          <div className="row align-items-center g-3">
+            <div className="col-lg-9">
+              <EmployeeFilter
+                searchTerm={searchTerm}
+                onSearchChange={setSearchTerm}
+                genderFilter={genderFilter}
+                onGenderChange={setGenderFilter}
+                statusFilter={statusFilter}
+                onStatusChange={setStatusFilter}
+                onClear={() => {
+                  setSearchTerm("");
+                  setGenderFilter("");
+                  setStatusFilter("");
+                }}
+              />
+            </div>
+            <div className="col-lg-3 text-lg-end">
+              <button
+                className="btn btn-primary mb-3"
+                onClick={() => setShowForm(true)}
+              >
+                + Add Employee
+              </button>
+            </div>
           </div>
         </div>
 
-        <EmployeeTable
-          employees={filteredEmployees}
-          onToggleStatus={toggleStatus}
-          onDelete={deleteEmployee}
-          onEdit={handleEditEmployee}
-        />
-
-        <EmployeeForm
-          show={showForm}
-          onClose={() => {
-            setShowForm(false);
-            setEditEmployee(null);
-          }}
-          onSave={handleSaveEmployee}
-          editEmployee={editEmployee}
-        />
+        <div className="card-body">
+          <EmployeeTable
+            employees={filteredEmployees}
+            onToggleStatus={toggleStatus}
+            onDelete={deleteEmployee}
+            onEdit={handleEditEmployee}
+          />
+        </div>
       </div>
+
+      <EmployeeForm
+        show={showForm}
+        onClose={() => {
+          setShowForm(false);
+          setEditEmployee(null);
+        }}
+        onSave={handleSaveEmployee}
+        editEmployee={editEmployee}
+      />
     </div>
   );
 };

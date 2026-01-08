@@ -1,6 +1,9 @@
+import React from 'react';
+import "../../assets/styles/Dashboard/dashboardcards.css"
+
 const DashboardCards = ({ total, active, inactive }) => {
     return (
-        <div className=" row row-cols-1 row-cols-md-3 g-3 mb-4">
+        <div className=" row row-cols-1 row-cols-md-3 g-3 mb-4 hand-pointer">
             <div className="col">
                 <div className="card shadow border-0 px-0">
                     <div className="card-body text-center">
