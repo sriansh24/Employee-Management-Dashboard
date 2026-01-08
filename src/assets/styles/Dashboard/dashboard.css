@@ -1,0 +1,21 @@
+.dashboard-title {
+    font-weight: 600;
+}
+
+.table img {
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .dashboard-title {
+        text-align: center;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .table-responsive {
+        border-radius: 10px;
+    }
+}
