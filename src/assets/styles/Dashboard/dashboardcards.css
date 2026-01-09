@@ -1,3 +1,9 @@
-.hand-pointer {
+.dashboard-card {
     cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dashboard-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
