@@ -51,24 +51,9 @@ const EmployeeTable = ({ employees, onToggleStatus, onDelete, onEdit }) => {
                                     </div>
                                 </td>
                                 <td className="text-center">
-                                    <button
-                                        className="btn btn-sm btn-outline-primary me-2"
-                                        onClick={() => onEdit(emp)}
-                                    >
-                                        Edit
-                                    </button>
-                                    <button
-                                        className="btn btn-sm btn-outline-danger me-2"
-                                        onClick={() => onDelete(emp.id)}
-                                    >
-                                        Delete
-                                    </button>
-                                    <button
-                                        className="btn btn-sm btn-outline-secondary"
-                                        onClick={() => window.print()}
-                                    >
-                                        Print
-                                    </button>
+                                    <button className="btn btn-sm btn-outline-primary me-2" onClick={() => onEdit(emp)}>Edit</button>
+                                    <button className="btn btn-sm btn-outline-danger me-2" onClick={() => onDelete(emp.id)}>Delete</button>
+                                    <button className="btn btn-sm btn-outline-secondary" onClick={() => window.print()}>Print</button>
                                 </td>
                             </tr>
                         ))}

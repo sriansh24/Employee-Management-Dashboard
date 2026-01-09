@@ -66,7 +66,9 @@ const EmdDashboard = () => {
   const filteredEmployees = useMemo(() => {
     return employees.filter((emp) => {
       const matchesSearch =
-        emp.full_name.toLowerCase().includes(searchTerm.toLowerCase());
+        (emp.full_name ?? "")
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase());;
       const matchesGender =
         genderFilter ? emp.gender === genderFilter : true;
       const matchesStatus = statusFilter === "active" ? emp.isActive :
@@ -103,10 +105,7 @@ const EmdDashboard = () => {
               />
             </div>
             <div className="col-lg-3 text-lg-end">
-              <button
-                className="btn btn-primary mb-3"
-                onClick={() => setShowForm(true)}
-              >
+              <button className="btn btn-primary mb-3" onClick={() => setShowForm(true)}>
                 + Add Employee
               </button>
             </div>
